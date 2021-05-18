@@ -1,0 +1,48 @@
+<!-- Definición de entidades comunes en todo el DTD-->
+<!ENTITY % id "id ID #REQUIRED">
+<!ENTITY % pagina "paginas CDATA #REQUIRED">
+<!ENTITY % url "url CDATA #REQUIRED">
+
+<!-- Nodo raiz de biblioteca-->
+<!ELEMENT biblioteca (libro*, revista*, periodico*)+>
+
+<!-- Definición de libro-->
+<!ELEMENT libro (titulo, capitulos, indice, sinopsis)>
+<!-- Atributos de libro-->
+<!ATTLIST libro %id;>
+<!ATTLIST libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+<!ATTLIST libro %pagina;>
+<!-- Definición de los elementos de libro-->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+<!ELEMENT capitulo (titulo, contenido)>
+<!ATTLIST capitulo %pagina;>
+<!ELEMENT contenido (#PCDATA)>
+<!ATTLIST contenido %url;>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+
+<!-- Definición de revista-->
+<!ELEMENT revista (titulo, numero, indice, secciones_revista)>
+<!-- Atributos de revista-->
+<!ATTLIST revista %id;>
+<!ATTLIST revista tipo_clase (informática | corazón | coches | investigación | otras) #REQUIRED>
+<!ATTLIST revista %pagina;>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT secciones_revista (seccion_revista+)>
+<!ELEMENT seccion_revista (contenido)>
+<!ATTLIST seccion_revista %pagina;>
+
+<!-- Definición de periodico-->
+<!ELEMENT periodico (secciones_periodico, indice)>
+<!-- Atributos de periodico-->
+<!ATTLIST periodico %id;>
+<!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
+<!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+<!-- Definición de los elementos de libro-->
+<!ELEMENT secciones_periodico (seccion_periodico+)>
+<!ELEMENT seccion_periodico (articulos)>
+<!ATTLIST seccion_periodico tipo_seccion CDATA #REQUIRED>
+<!ELEMENT articulos (articulo+)>
+<!ELEMENT articulo (contenido)>
+<!ATTLIST articulo autor CDATA #REQUIRED>

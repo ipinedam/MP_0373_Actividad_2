@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./biblioteca_xsd.xsd">
+
+    <libro id="L0001" tipo_clase="novela" paginas="1024">
+        <titulo>Harry Potter y la piedra filosofal</titulo>
+        <capitulos>
+            <capitulo paginas="75">
+                <titulo>El niño que sobrevivió</titulo>
+                <contenido url="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_la_piedra_filosofal#Cap.C3.ADtulo_1:_El_ni.C3.B1o_que_sobrevivi.C3.B3">Primer capítulo</contenido>
+            </capitulo>
+            <capitulo paginas="81">
+                <titulo>El vidrio que se desvaneció</titulo>
+                <contenido url="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_la_piedra_filosofal#Cap.C3.ADtulo_2:_El_vidrio_que_se_desvaneci.C3.B3">Segundo capítulo</contenido> 
+            </capitulo>
+        </capitulos>
+        <indice>1. El niño que sobrevivió 2.El vidrio que se desvaneció</indice>
+        <sinopsis>Sinopsis de Harry Potter</sinopsis>
+    </libro>
+
+    <revista id="R0001" tipo_clase="informática" paginas="90">
+        <titulo>Pc Magazine</titulo>
+        <numero>2</numero>
+        <indice>1.Android beta 2.Chromebooks</indice>
+        <secciones_revista>
+            <seccion_revista paginas="15">
+                <contenido url="https://www.pcmag.com/news/clubhouse-launches-android-beta">Android beta</contenido>
+            </seccion_revista>
+            <seccion_revista paginas="8">
+                <contenido url="https://www.pcmag.com/news/google-teases-official-docking-stations-for-chromebooks">Chromebooks</contenido>
+            </seccion_revista>
+        </secciones_revista>
+    </revista>
+
+    <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2021-05-10">
+        <secciones_periodico>
+            <seccion_periodico tipo_seccion="económica"> 
+                <articulos>
+                    <articulo autor="MIGUEL ÁNGEL PATIÑO"> 
+                        <contenido url="https://www.expansion.com/empresas/energia/2021/05/10/6099440c468aeb01118b4621.html"> Banco Santander emerge en Repsol </contenido>
+                    </articulo>
+                    <articulo autor="MERCEDES SERRALLER">
+                        <contenido url="https://www.expansion.com/economia/2021/05/10/60997107468aeb53368b45ef.html"> Hacienda revisará los beneficios fiscales </contenido>
+                    </articulo>
+                </articulos>
+            </seccion_periodico>
+            <seccion_periodico tipo_seccion="deportes"> 
+                <articulos>
+                    <articulo autor="JOSÉ LUIS RUIZ"> 
+                        <contenido url="https://www.marca.com/motor/formula1/gp-espana/2021/05/10/60995fbbe2704e60598b45a1.html"> Ferrari no necesitará mucho </contenido>
+                    </articulo>
+                </articulos>
+            </seccion_periodico>
+        </secciones_periodico>
+        <indice>1.Banco Santander 2.Hacienda 3.Ferrari</indice>
+    </periodico>
+
+</biblioteca>
